@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-j1*eblvkpp8x*4i0f-%wclckk(9-ua5u(x@gpji2!l%_lv+&d2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['172.17.20.159']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'SystemAuth',
     'ProductManager',
-    'OrderingManager'
+    'OrderingManager',
+    'corsheaders',
 
 ]
 
@@ -54,7 +56,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # for allow origins
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'vuta_ecommerce.urls'
 

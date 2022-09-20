@@ -1,5 +1,7 @@
 from django.db import models
 
+from SystemAuth.models import User
+
 
 # Create your models here.
 class Category(models.Model):
@@ -26,3 +28,5 @@ class Image(models.Model):
 
     def __str__(self):
         return self.product_id.name
+
+

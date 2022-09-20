@@ -5,4 +5,5 @@ app_name = 'ProductManager'
 urlpatterns = [
     path('Products/', AllProducts),
     path('Categories/', Categories),
+    path('createProduct/', CreateProduct),
 ]
