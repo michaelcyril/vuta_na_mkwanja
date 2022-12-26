@@ -1,3 +1,1 @@
-For authentications with jwt 
-
-https://medium.com/django-rest/django-rest-framework-jwt-authentication-94bee36f2af8
+This project is about an e-commerce system that includes sales, product addition and order placement.
